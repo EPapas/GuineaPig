@@ -7,6 +7,22 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GuineaPigData\GuineaPigData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Content\Images\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\NewFolder1\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\NewFolder2\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\Images\guinea-pigs-coloration.jpg" />
   </ItemGroup>
 
 </Project>

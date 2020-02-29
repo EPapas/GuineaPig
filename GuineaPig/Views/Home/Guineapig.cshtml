@@ -1,0 +1,49 @@
+﻿@using GuineaPig.Models
+@model GuineaPig.Models.GuineaPigInfo
+@{
+    ViewData["Title"] = "Guineapig";
+}
+
+<br />
+<br />
+
+
+    <legend>Tell Me about your GuineaPig</legend>
+    <img src="~/lib/Images/guinea-pigs-coloration.jpg" width="500" />
+
+    <form asp-controller="GuineaPig"
+          asp-action="GetGuineaPigData" method="post">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-12 form-group">
+                    @Html.LabelFor(x => x.Name)
+                    @Html.TextBoxFor(x => x.Name)
+                </div>
+
+
+                <div class="col-md-12 form-group">
+                    @Html.LabelFor(x => x.color)
+                    @Html.TextBoxFor(x => x.color)
+                </div>
+
+                <div class="col-md-12 form-group ">
+                    @Html.LabelFor(x => x.breeds)
+                    @Html.DropDownListFor(x => x.selectedbreed, new SelectList(Model.breeds), "Select Breed")
+                </div>
+                <div class="col-md-2 form-group">
+                    @Html.LabelFor(x => x.dateofbirth)
+                    @Html.TextBoxFor(x => x.dateofbirth, new { @type = "date", @class = "form-control datepicker", @Value = Model.dateofbirth.ToString("yyyy-MM-dd") })
+                </div>
+
+                <div class="col-md-12 form-group ">
+                    <button type="submit" value="Submit" class="btn btn-primary" >Submit</button>
+                </div>
+
+
+
+                </div>
+            </div>
+    </form>
+
